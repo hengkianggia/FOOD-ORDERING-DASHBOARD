@@ -9,6 +9,7 @@ import Transtractions from "./Transtractions";
 const MainOverview = () => {
   return (
     <div className="w-full h[100vh] px-8 relative -mt-16 flex justify-between">
+      {/* left */}
       <div id="left" className="w-[68%] h-full space-y-4">
         <MainRevenue />
         <div className="w-full flex flex-wrap justify-between gap-y-4">
@@ -17,6 +18,8 @@ const MainOverview = () => {
           <Transtractions />
         </div>
       </div>
+
+      {/* right */}
       <div id="right" className="w-[30%] h-full space-y-4">
         <TotalUnitSales />
         <TotalOrder />
