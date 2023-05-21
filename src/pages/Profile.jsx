@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import MainNavbar from "../component/Root/MainNavbar";
+import MainProfile from "../component/Profile/MainProfile";
 
 const Profile = () => {
   return (
-    <div>Profile</div>
-  )
-}
+    <>
+      <MainNavbar />
+      <MainProfile />
+    </>
+  );
+};
 
-export default Profile
+export default Profile;
