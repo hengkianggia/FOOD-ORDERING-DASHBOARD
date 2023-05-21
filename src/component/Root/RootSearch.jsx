@@ -2,6 +2,7 @@ import React from 'react'
 
 import { IoMdNotifications } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const RootSearch = () => {
   return (
@@ -18,7 +19,9 @@ const RootSearch = () => {
         <span className="text-[24px] mr-10 cursor-pointer">
           <MdEmail />
         </span>
-        <div className="w-10 h-10 bg-gray-400 rounded-full cursor-pointer"></div>
+        <Link to={'/profil'}>
+          <div className="w-10 h-10 bg-gray-400 rounded-full cursor-pointer"></div>
+        </Link>
       </div>
     </div>
   );

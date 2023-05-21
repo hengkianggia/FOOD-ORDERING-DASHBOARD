@@ -4,9 +4,10 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Root from "./pages/Root";
 import LoginPage from "./pages/LoginPage";
 import Overview from "./pages/Overview";
-import Orders from "./pages/Orders";
+import Transtractions from "./pages/Transtractions";
 import Product from "./pages/Product";
 import NewProduct from "./pages/NewProduct";
+import Profile from "./pages/Profile";
 
 function App() {
   const router = createBrowserRouter([
@@ -23,8 +24,8 @@ function App() {
           element: <Overview />,
         },
         {
-          path: "orders",
-          element: <Orders />,
+          path: "transtractions",
+          element: <Transtractions />,
         },
         {
           path: "product",
@@ -35,6 +36,10 @@ function App() {
           element: <NewProduct />,
         },
       ],
+    },
+    {
+      path: "profil",
+      children: [{ index: true, element: <Profile /> }],
     },
   ]);
   return (

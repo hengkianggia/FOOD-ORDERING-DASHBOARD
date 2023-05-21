@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 
 import { IoAddCircleSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import Button from "../UI/Button";
 
 const MainAddProduct = () => {
   const [discount, setDiscount] = useState(false);
+  const [checked, setChecked] = useState(false);
   const showDiscountHandler = () => {
     setDiscount(!discount);
   };
@@ -36,11 +39,59 @@ const MainAddProduct = () => {
         </div>
 
         <div className="flex flex-col gap-2">
+          <label htmlFor="Kategori" className="font-semibold text-lg">
+            Kategori
+          </label>
+          <span className="flex gap-x-5">
+            <label>
+              <input
+                type="checkbox"
+                defaultChecked={checked}
+                onChange={() => setChecked(!checked)}
+              />
+              Makanan
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                defaultChecked={checked}
+                onChange={() => setChecked(!checked)}
+              />
+              Minuman
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                defaultChecked={checked}
+                onChange={() => setChecked(!checked)}
+              />
+              Lunch
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                defaultChecked={checked}
+                onChange={() => setChecked(!checked)}
+              />
+              Breakfast
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                defaultChecked={checked}
+                onChange={() => setChecked(!checked)}
+              />
+              Dinner
+            </label>
+          </span>
+        </div>
+
+        <div className="flex flex-col gap-2">
           <label htmlFor="name" className="font-semibold text-lg">
             Harga
           </label>
           <input
-            type="text"
+            type="number"
             id="name"
             placeholder="Masukkan harga product"
             className="p-2 border w-full"
@@ -69,6 +120,18 @@ const MainAddProduct = () => {
             )}
           </div>
         </div>
+
+        <div className="mt-5">
+          <Link>
+            <Button text={"Lihat preview"} className={"w-[15%] bg-green-300"} />
+          </Link>
+        </div>
+
+        <Button
+          text={"Post"}
+          className={"w-[15%] bg-green-300"}
+          type={"submit"}
+        />
       </form>
     </div>
   );
